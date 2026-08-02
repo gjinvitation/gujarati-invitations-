@@ -1,5 +1,6 @@
+```html
 <!DOCTYPE html>
-<html lang="gu">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,16 +8,16 @@
 </head>
 <body>
 
-    <h1>GJ Invitation વેબસાઇટ</h1>
-    <p>ફિરેબેઝ કનેક્શન સેટઅપ પૂર્ણ થયું છે.</p>
+    <h1>GJ Invitation Website</h1>
+    <p>Firebase connection setup completed successfully.</p>
 
-    <!-- Firebase SDK અને કન્ફિગરેશન માટેનો સ્ક્રિપ્ટ કોડ -->
+    <!-- Firebase SDK and Configuration Script -->
     <script type="module">
-        // CDN દ્વારા Firebase મોડ્યુલ ઇમ્પોર્ટ કરો
+        // Import Firebase modules via CDN
         import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
         import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
 
-        // તમારા વેબ એપનું ફિરેબેઝ કન્ફિગરેશન
+        // Your web app's Firebase configuration
         const firebaseConfig = {
           apiKey: "AIzaSyDUf0osOhnf2jif-grTPYPdXhFsIO3sHL4",
           authDomain: "gj-invitation.firebaseapp.com",
@@ -27,12 +28,14 @@
           measurementId: "G-9471QH8QE4"
         };
 
-        // Firebase ઇનિશિયલાઇઝ કરો
+        // Initialize Firebase
         const app = initializeApp(firebaseConfig);
         const analytics = getAnalytics(app);
         
-        console.log("Firebase સફળતાપૂર્વક કનેક્ટ થઈ ગયું છે!");
+        console.log("Firebase connected successfully!");
     </script>
 
 </body>
 </html>
+
+```
