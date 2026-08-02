@@ -1,4 +1,11 @@
 # gujarati-invitations
+<div class="search-container">
+    <input type="text" class="search-box" placeholder="🔍 Search Invitation...">
+    <button style="margin-left:10px;padding:15px 25px;border:none;background:#007BFF;color:white;border-radius:30px;cursor:pointer;">
+        Search
+    </button>
+</div>
+
  A collection of digital invitation templates baby shower invitation 
 What app 9904564376
 <video width="100%" controls>
