@@ -1,41 +1,69 @@
-```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="gu">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GJ Invitation - Firebase Setup</title>
+    <title>સીમંત સંસ્કાર સંપાદન</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <h1>GJ Invitation Website</h1>
-    <p>Firebase connection setup completed successfully.</p>
-
-    <!-- Firebase SDK and Configuration Script -->
-    <script type="module">
-        // Import Firebase modules via CDN
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-analytics.js";
-
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyDUf0osOhnf2jif-grTPYPdXhFsIO3sHL4",
-          authDomain: "gj-invitation.firebaseapp.com",
-          projectId: "gj-invitation",
-          storageBucket: "gj-invitation.firebasestorage.app",
-          messagingSenderId: "293486542655",
-          appId: "1:293486542655:web:4773958cd4c7e6c3e31d8a",
-          measurementId: "G-9471QH8QE4"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
+    <!-- મુખ્ય કંકોત્રીનું કન્ટેનર -->
+    <div class="invitation-container">
+        <img src="card_background.jpg" alt="સીમંત કાર્ડ" class="background-image">
         
-        console.log("Firebase connected successfully!");
-    </script>
+        <!-- દરેક લખાણ માટે અલગ 'span' ટેગ, id દ્વારા ઓળખાશે -->
+        <span id="text-snehi" class="editable-text">સ્નેહી શ્રી...</span>
+        <span id="text-parents" class="editable-text">અ.સૌ. મધુબેન તથા કમલેશભાઈ કેશુભાઈ પટેલ</span>
+        <span id="text-child" class="editable-text">ચિ. ભાર્ગવ</span>
+        <span id="text-mother" class="editable-text">અ.સૌ. મયુરી</span>
+        <span id="text-date-time" class="editable-text">તા. ૨૩/૦૭/૨૦૨૭, ગુરુવાર સવારે ૯:૦૦ કલાકે</span>
+        <span id="text-lunch-date" class="editable-text">તા. ૨૩/૦૭/૨૦૨૭, ગુરુવાર બપોરે ૧૨:૩૦ કલાકે</span>
+        <span id="text-hosts" class="editable-text">કમલેશભાઈ કેશુભાઈ પટેલ <br>મનુભાઈ કેશુભાઈ પટેલ</span>
+        <span id="text-address" class="editable-text">અમારૂ નિવાસ સ્થાન<br>મો.: 9904564376</span>
+    </div>
 
+    <!-- એડિટિંગ પેનલ (ફોર્મ) -->
+    <div id="editor-panel">
+        <h2>કાર્ડમાં ફેરફાર કરો</h2>
+        <p>નીચે આપેલા ફોર્મમાં નવી વિગતો ભરો.</p>
+
+        <div class="form-group">
+            <label for="inp-snehi">સ્નેહી શ્રીનું નામ:</label>
+            <input type="text" id="inp-snehi" placeholder="દા.ત., અંકુરભાઈ">
+        </div>
+        <div class="form-group">
+            <label for="inp-parents">માતા-પિતાનું નામ:</label>
+            <input type="text" id="inp-parents" placeholder="...મધુબેન તથા કમલેશભાઈ">
+        </div>
+        <div class="form-group">
+            <label for="inp-child">સુપુત્રનું નામ:</label>
+            <input type="text" id="inp-child" placeholder="...ચિ. ભાર્ગવ">
+        </div>
+        <div class="form-group">
+            <label for="inp-mother">ગર્ભવતી માતાનું નામ:</label>
+            <input type="text" id="inp-mother" placeholder="...અ.સૌ. મયુરી">
+        </div>
+        <div class="form-group">
+            <label for="inp-date-time">પ્રથમ કાર્યક્રમની તારીખ અને સમય:</label>
+            <input type="text" id="inp-date-time" placeholder="...તા. ૨૩/૦૭/૨૦૨૭...">
+        </div>
+        <div class="form-group">
+            <label for="inp-lunch-date">ભોજન સમારંભની તારીખ અને સમય:</label>
+            <input type="text" id="inp-lunch-date" placeholder="...તા. ૨૩/૦૭/૨૦૨૭...">
+        </div>
+        <div class="form-group">
+            <label for="inp-hosts">નિંત્રક (યજમાન) ના નામ:</label>
+            <textarea id="inp-hosts" rows="2" placeholder="...કમલેશભાઈ પટેલ..."></textarea>
+        </div>
+        <div class="form-group">
+            <label for="inp-address">સ્થળ અને મોબાઈલ નં.:</label>
+            <textarea id="inp-address" rows="2" placeholder="...અમારૂ નિવાસ સ્થાન..."></textarea>
+        </div>
+
+        <button id="download-btn">કાર્ડ ડાઉનલોડ કરો (Image)</button>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
-```
